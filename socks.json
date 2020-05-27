@@ -1,0 +1,27 @@
+{
+	"logs": {
+		"loglevel":"error",
+		"access":"/var/log/v2ray/access.log",
+		"error":"/var/log/v2ray/access.log"
+	},
+  "inbounds": [
+    {
+      "port": "port",
+      "protocol": "socks",
+      "sniffing":{
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
+      "settings": {
+        "auth": "noauth",
+        "ip": "127.0.0.1"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
