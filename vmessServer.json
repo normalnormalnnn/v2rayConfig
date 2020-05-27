@@ -1,0 +1,22 @@
+{
+  "log":{
+    "loglevel":"warning",
+    "access":"none",
+    "error":"/var/log/v2ray/error.log"
+  },
+  "inbounds": [{
+    "port": "port", 
+    "protocol": "vmess",
+    "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
+    "settings": {
+      "clients": [{ "id": "uuid", "alterId": 1 }]
+    }
+  }],
+  "outbounds": [{
+    "protocol": "freedom",
+    "settings": {}
+  }]
+}
